@@ -12,6 +12,5 @@ project="CITestProject"
   -silent-crashes \
   -projectPath $(pwd) \
   -runEditorTests
-  -quit
 
 echo "UnitTest COMPLETED! Exited with $?"
