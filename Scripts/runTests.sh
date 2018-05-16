@@ -1,6 +1,8 @@
 #! /bin/sh
 project="CITestProject"
 
+echo $(pwd)/TestResults.xml
+
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -projectPath $(pwd) \
