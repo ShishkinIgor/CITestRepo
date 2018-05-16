@@ -8,4 +8,4 @@ before_install:
 install:
 - ./Scripts/install.sh
 script:
-- travis_wait 15 ./Scripts/runTests.sh
+- ./Scripts/runTests.sh
