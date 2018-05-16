@@ -3,17 +3,18 @@ project="CITestProject"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
-  -nographics \
-  -silent-crashes \
   -projectPath $(pwd) \
+  -editorTestsResultFile $(pwd)/TestResults.xml \
   -runEditorTests
 
-if [ $? = 0 ] ; then
-  echo "UnitTests COMPLETED! Exited with $?"
+testResult=$?
+
+if [ $testResult = 0 ] ; then
+  echo "UnitTests COMPLETED! Exited with $testResult"
   exit 0
 else
-  echo "UnitTests FAILED! Exited with $?"
+  echo "UnitTests FAILED! Exited with $testResult"
   echo 'Test logs'
-  cat $(pwd)/integrationTests.log
+  cat $(pwd)/TestResults.xml
   exit 1
 fi
