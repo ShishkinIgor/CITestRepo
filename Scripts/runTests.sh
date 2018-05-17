@@ -9,7 +9,7 @@ echo "Logs path: $(pwd)$testLog"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -silent-crashes \
-  -projectPath $(pwd)$project \
+  -projectPath $(pwd) \
   -editorTestsResultFile $(pwd)$testLog \
   -runEditorTests
 
@@ -23,7 +23,5 @@ else
   echo 'Test logs'
   ls -R $(pwd)
   cat $(pwd)$testLog
-  echo "Unity log:"
-  cat $(pwd)/unity.log
   exit 1
 fi

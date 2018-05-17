@@ -4,6 +4,10 @@
 
 # Change this the name of your project. This will be the name of the final executables as well.
 project="CITestProject"
+buildSettings="/ProjectSettings/EditorBuildSettings.asset"
+
+echo "Build setting:"
+cat $(pwd)$buildSettings
 
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
