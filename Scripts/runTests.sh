@@ -4,8 +4,7 @@ testLog="TestResults.xml"
 projectPath=$(dirname "$0")"/../"
 
 echo "Project path: $projectPath$project"
-
-tree
+echo $(pwd)
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
