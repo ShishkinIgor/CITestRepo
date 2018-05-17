@@ -4,7 +4,7 @@ testLog="/TestResults.xml"
 projectPath=$(dirname "$0")"/../"
 
 echo "Project path: $(pwd)$project"
-echo $(pwd)
+echo "Logs path: $(pwd)$testLog"
 ls -R $(pwd)
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
