@@ -1,12 +1,12 @@
 #! /bin/sh
 project="CITestProject"
-
-echo $(pwd)/TestResults.xml
+testLog="TestResults.xml"
+projectPath=$(dirname "$0")"/../"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
-  -projectPath $(pwd)/$project \
-  -editorTestsResultFile $(pwd)/TestResults.xml \
+  -projectPath $projectPath$project \
+  -editorTestsResultFile $projectPath$testLog \
   -runEditorTests
 
 testResult=$?
@@ -17,6 +17,6 @@ if [ $testResult = 0 ] ; then
 else
   echo "UnitTests FAILED! Exited with $testResult"
   echo 'Test logs'
-  cat $(pwd)/TestResults.xml
+  cat $projectPath$testLog
   exit 1
 fi
