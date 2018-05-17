@@ -5,6 +5,8 @@ projectPath=$(dirname "$0")"/../"
 
 echo "Project path: $projectPath$project"
 
+tree
+
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -silent-crashes \
