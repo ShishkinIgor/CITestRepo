@@ -7,6 +7,7 @@ echo "Project path: $projectPath$project"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
+  -silent-crashes \
   -projectPath $projectPath$project \
   -editorTestsResultFile $projectPath$testLog \
   -runEditorTests
