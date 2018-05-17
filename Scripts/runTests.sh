@@ -5,7 +5,7 @@ echo $(pwd)/TestResults.xml
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
-  -projectPath $(pwd) \
+  -projectPath $(pwd)/$project \
   -editorTestsResultFile $(pwd)/TestResults.xml \
   -runEditorTests
 
