@@ -5,7 +5,6 @@ projectPath=$(dirname "$0")"/../"
 
 echo "Project path: $(pwd)$project"
 echo "Logs path: $(pwd)$testLog"
-ls -R $(pwd)
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
@@ -22,6 +21,9 @@ if [ $testResult = 0 ] ; then
 else
   echo "UnitTests FAILED! Exited with $testResult"
   echo 'Test logs'
+  ls -R $(pwd)
   cat $(pwd)$testLog
+  echo "Unity log:"
+  cat $(pwd)/unity.log
   exit 1
 fi
