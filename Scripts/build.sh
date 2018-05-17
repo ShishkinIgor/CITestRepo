@@ -15,7 +15,7 @@ echo "Attempting to build $project for Windows"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
+  -projectPath $(pwd)$project \
   -buildOSXUniversalPlayer "$(pwd)/Build/windows$project.exe" \
   -quit
 
