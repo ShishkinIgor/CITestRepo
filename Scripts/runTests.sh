@@ -3,7 +3,7 @@ project="/CITestProject"
 testLog="/TestResults.xml"
 projectPath=$(dirname "$0")"/../"
 
-echo "Project path: $projectPath$project"
+echo "Project path: $(pwd)$project"
 echo $(pwd)
 ls -R $(pwd)
 
