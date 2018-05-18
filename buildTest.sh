@@ -22,4 +22,4 @@ echo "Attempting to build $project for OSX"
 
 echo $?
 echo 'Logs from build'
-#cat $(pwd)/unity.log
+cat $projectPath/unity.log
