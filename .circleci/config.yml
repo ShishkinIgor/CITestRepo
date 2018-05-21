@@ -5,6 +5,6 @@ jobs:
       xcode: "8.3.3"
     steps:
       - checkout
-	  - run: ls
+      - run: ls
       - install.sh
       - build.sh
