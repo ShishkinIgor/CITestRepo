@@ -2,10 +2,8 @@ os: osx
 language: objective-c
 before_install:
 - chmod a+x ./Scripts/install.sh
-- chmod a+x ./Scripts/runTests.sh
-- chmod a+x ./Scripts/buildTest.sh
+- chmod a+x ./Scripts/runCommand.sh
 install:
 - ./Scripts/install.sh
 script:
-- ./Scripts/buildTest.sh
-- ./Scripts/runTest.sh
+- ./Scripts/runCommand.sh
