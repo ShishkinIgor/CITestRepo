@@ -4,19 +4,20 @@
 
 # Change this the name of your project. This will be the name of the final executables as well.
 project="/CITestProject"
+projectPath=$(dirname "$0")
 
 echo "Current path:"
-echo $0
+echo projectPath
 
-echo "Attempting to build $project for OSX"
+echo "Attempting to build $projectPath$project for OSX"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile $0/unity.log \
-  -projectPath $0$project \
-  -buildOSXUniversalPlayer "$0/Build/osx$project.exe" \
+  -logFile $projectPath/unity.log \
+  -projectPath $projectPath$project \
+  -buildOSXUniversalPlayer "$projectPath/Build/osx$project.exe" \
   -quit
 
 echo 'Logs from build'
-cat $0/unity.log
+cat $projectPath/unity.log
