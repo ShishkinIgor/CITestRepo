@@ -6,17 +6,17 @@
 project="/CITestProject"
 
 echo "Current path:"
-echo $(pwd)
+echo $0
 
 echo "Attempting to build $project for OSX"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile $(pwd)/unity.log \
-  -projectPath $(pwd)$project \
-  -buildOSXUniversalPlayer "$(pwd)/Build/osx$project.exe" \
+  -logFile $0/unity.log \
+  -projectPath $0$project \
+  -buildOSXUniversalPlayer "$0/Build/osx$project.exe" \
   -quit
 
 echo 'Logs from build'
-cat $(pwd)/unity.log
+cat $0/unity.log
