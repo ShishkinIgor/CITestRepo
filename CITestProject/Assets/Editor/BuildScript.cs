@@ -9,7 +9,7 @@ public class BuildScript : MonoBehaviour {
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
         buildPlayerOptions.scenes = new[] { "Assets/Scenes/TestScene1.unity" };
         buildPlayerOptions.locationPathName = "Builds/OSXBuild";
-        buildPlayerOptions.target = BuildTarget.StandaloneOSXUniversal;
+        buildPlayerOptions.target = BuildTarget.StandaloneOSX;
         buildPlayerOptions.options = BuildOptions.None;
         BuildPipeline.BuildPlayer(buildPlayerOptions);
     }
