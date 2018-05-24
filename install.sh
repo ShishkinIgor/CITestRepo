@@ -1,5 +1,4 @@
 #! /bin/sh
-
 BASE_URL=https://download.unity3d.com/download_unity
 HASH=a9f86dcd79df
 VERSION=2017.3.0f3
