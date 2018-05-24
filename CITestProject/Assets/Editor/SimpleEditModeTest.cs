@@ -12,9 +12,9 @@ public class SimpleEditModeTest {
         Assert.Pass("Test pass.");
 	}
 
-    [Test]
-    public void FailedPass()
-    {
-        Assert.Fail("Test failed.");
-    }
+    //[Test]
+    //public void FailedPass()
+    //{
+    //    Assert.Fail("Test failed.");
+    //}
 }
