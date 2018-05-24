@@ -1,8 +1,4 @@
 #! /bin/sh
-
-# Example build script for Unity3D project. See the entire example: https://github.com/JonathanPorta/ci-build
-
-# Change this the name of your project. This will be the name of the final executables as well.
 project="/CITestProject"
 projectPath=$(dirname "$0")
 
@@ -19,5 +15,14 @@ echo "Attempting to build $projectPath$project for OSX"
   -buildOSXUniversalPlayer "$projectPath/Build/osx$project.exe" \
   -quit
 
-echo 'Logs from build'
-cat $projectPath/unity.log
+testResult=$?
+
+if [ $testResult = 0 ] ; then
+  echo "OSX build COMPLETED! Exited with $testResult"
+  exit 0
+else
+  echo "OSX build FAILED! Exited with $testResult"
+  echo 'Logs from build'
+  cat $projectPath/unity.log
+  exit 1
+fi
