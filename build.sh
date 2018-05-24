@@ -2,9 +2,6 @@
 project="/CITestProject"
 projectPath=$(dirname "$0")
 
-echo "Current path:"
-echo projectPath
-
 echo "Attempting to build $projectPath$project for OSX"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \

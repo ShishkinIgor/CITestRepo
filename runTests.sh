@@ -3,9 +3,6 @@ project="/CITestProject"
 testLog="/TestResults.xml"
 projectPath=$(dirname "$0")
 
-echo "Project path: $projectPath$project"
-echo "Logs path: $projectPath$testLog"
-
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -silent-crashes \
