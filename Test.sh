@@ -1,2 +1,2 @@
 echo $UNITY
-echo $CONFLICT2
+echo $CONFLICT1
