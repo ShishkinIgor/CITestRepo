@@ -1,1 +1,2 @@
 echo $UNITY
+echo $TEST
