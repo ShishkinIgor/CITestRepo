@@ -1,2 +1,2 @@
 echo $UNITY
-echo $CONFLICT1
+#Make commit link to jira task
